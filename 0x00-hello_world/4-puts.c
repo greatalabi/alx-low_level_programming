@@ -1,12 +1,14 @@
-#include <studio.sh>
+#include <stdio.h>
 
-/*
- *This code outputs Programming is like...
- *It ends with a new line
+/**
+ * Main- this is where the input code starts
+ *
+ * Return: the code ends with a new line
 */
 
 int main(void)
 {
+
 puts("\"Programming is like building a multilingual puzzle");
 return (0);
 
