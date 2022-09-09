@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * Main- this is where the input code starts
+ * main- entry point for the program
  *
  * Return: the code ends with a new line
 */
