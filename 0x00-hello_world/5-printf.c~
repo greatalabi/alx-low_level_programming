@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+/**
+ * main - entry point for the programme
+ *
+ * return: always zero terminates the programme
+ */
+
+int main(void)
+{
+printf("\"with proper grammar, but the outcome is a piece of art,");
+return (0);
+}
