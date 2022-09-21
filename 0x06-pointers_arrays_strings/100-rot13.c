@@ -1,25 +1,36 @@
 #include "main.h"
 
 /**
- * print_number - prints an integer;
- * @n: integer to be printed;
+ * rot13 - encodes a string using the ROT13 system
+ * @str: String to be encoded
+ *
+ * Return: Encoded string
  */
 
-void print_number(int n)
+char *rot13(char *str)
 {
-	unsigned int n1;
+	int i, j;
+	char *lookup;
 
-	if (n < 0)
+	lookup = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	i = 0;
+	while (str[i] != '\0')
 	{
-		n1 = -n;
-		_putchar('-');
-	} else
-	{
-		n1 = n;
+		j = 0;
+		while (lookup[j] != '\0')
+		{
+			if (str[i] == lookup[j])
+			{
+				int index;
+
+				index = ((j + 13) % 26) + ((j / 26) * 26);
+				str[i] = lookup[index];
+				break;
+			}
+			j++;
+		}
+		i++;
 	}
 
-	if (n1 / 10)
-		print_number(n1 / 10);
-
-	_putchar((n1 % 10) + '0');
+	return (str);
 }
